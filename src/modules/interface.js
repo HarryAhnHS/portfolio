@@ -66,6 +66,10 @@ const Interface = (() => {
         return storage;
     }
 
+    function showProjects() {
+        
+    }
+
     return {
         setStorage
     }

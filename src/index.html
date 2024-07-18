@@ -7,28 +7,42 @@
 </head>
 <body>
     <header>
-        <div>HHA</div>
-        <div>Prospective Software Engineer</div>
+        <h1>Harry Ahn</h1>
+        <h4>Software Engineer</h4>
+        <p>I am an aspiring software engineer with meticulous attention to detail.</p>
         <nav>
-            <a href="#">Home</a>
-            <a href="#">Projects</a>
-            <a href="#">Contact</a>
+            <a href="#about">
+                <span class="nav-indicator"></span>
+                <p>About</p>
+            </a>
+            <a href="#projects">
+                <span class="nav-indicator"></span>
+                <p>Projects</p>
+            </a>
         </nav>
+        <ul>
+            <li><a href="https://github.com/HarryAhnHS" target="_blank">Github</a></li>
+            <li><a href="https://www.linkedin.com/in/hongsuh-ahn-b7520a188/" target="_blank">Linkedin</a></li>
+            <li><a href="mailto:harryahn@usc.edu">Email</a></li>
+        </ul>
     </header>
     <main>
-        <h1>My Projects</h1>
-        <div class="projects-wrapper">
-            <div class="project"></div>
+        <div class="toggles">
+            <button class="light"></button>
         </div>
-
-    </main>
-    <div class="footer">
-        &copy; Copyright by @HarryAhnHS 
-        <a href="https://github.com/HarryAhnHS" class="github-a" target="_blank">
-            <div class="github-logo">
-                <img id="github" alt="github">
+        <section id="about">
+            <h2>Welcome.</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tincidunt mi nec dolor luctus, nec imperdiet libero varius. Suspendisse potenti. Phasellus maximus, neque sed aliquet cursus, nunc ligula posuere felis, non rutrum orci nibh vel justo. Aliquam auctor purus sed bibendum tristique. In faucibus bibendum maximus. Ut dictum nulla nec libero pellentesque porttitor nec id lacus. Aliquam pharetra ex et suscipit pulvinar. Sed ac lorem justo. Sed vel nunc est. Maecenas vel tortor vitae est aliquam viverra sit amet quis est. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis feugiat tellus. Quisque tincidunt urna vel sem rhoncus, eu mattis felis maximus. Sed tincidunt posuere velit nec semper.
+            </p>
+            
+        </section>
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="projects-wrapper">
+                <div class="project"></div>
             </div>
-        </a>
-    </div>
+        </section>
+    </main>
 </body>
 </html>

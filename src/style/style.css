@@ -1,8 +1,135 @@
 /* Font */
-@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+
+html {
+    scroll-behavior: smooth ;
+    /* Custom properties for theme */
+    --header-color: #0d3b66;
+    --header-text-color: #edf6f9;
+
+    --main-background-color: white;
+    --main-text-color: black;
+
+    --accent-color: #f4d35e;
+}
 
 img {
     max-width: 100%;
+}
+
+body {
+    font-family: 'Mukta', sans-serif;
+    font-weight: 300;
+
+    margin: 0px;
+
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Header content */
+
+header {
+    height: 100vh;
+    width: 40%;
+    background-color: var(--header-color);
+    color: var(--header-text-color);
+    
+    position: fixed;
+    top:0;
+    left: 0;
+
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 100px;
+
+    box-sizing: border-box;
+}
+
+header > h1 {
+    font-size: 48px;
+    font-weight: 600;
+    margin: 0px;
+
+}
+
+header > h4 {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0px;
+}
+
+header > p {
+    font-weight: 200;
+    margin: 0px;
+}
+
+/* Navbar */
+
+nav {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 15px;
+
+    width: 50%;
+}
+
+nav > a {
+    text-decoration: none;
+    color: (--header-text-color);
+
+    display: flex;
+    align-items: center;
+}
+
+nav > a:visited {
+    color: inherit;
+}
+
+.nav-indicator {
+    margin-left: 10px;
+    margin-right: 10px;
+
+    height: 0px;
+    width: 30px;
+
+    border-top: 1px solid var(--header-text-color);
+
+    transition: width 0.5s;
+}
+
+nav > a:hover > .nav-indicator {
+    width: 50px;
+}
+
+nav > a > p {
+    text-transform: uppercase;
+    margin: 0px;
+}
+
+/* Links styling */
+
+ul {
+    list-style-type: none;
+}
+
+li > a {
+    text-decoration: none;
+    color: inherit;
+}
+
+main {
+    width: 60%;
+}
+
+#about {
+    height: 100vh;
+}
+
+#projects {
+    height: 100vh;
 }
 
 .footer {

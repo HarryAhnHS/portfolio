@@ -10,7 +10,7 @@ class Project {
 
 class ProjectList {
     constructor() {
-        this.projectList;
+        this.projectList = [];
     }
 
     getProject(name) {
@@ -21,7 +21,7 @@ class ProjectList {
 
     addProject(screenshot, name, desc, tools, links) {
         const newProj = new Project(screenshot, name, desc, tools, links);
-        this.projectList.push(newProj);
+        this.projectList.unshift(newProj);
     }
 
     deleteProject(name) {
@@ -30,4 +30,4 @@ class ProjectList {
     }
 }
 
-export {Project, ProjectList};
+export default ProjectList;

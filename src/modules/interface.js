@@ -1,4 +1,4 @@
-import {Project, ProjectList} from "./project";
+import ProjectList from "./project";
 
 import EtchASketch from "../assets/screenshots/etchasketch.png";
 import Calculator from "../assets/screenshots/calculator.png";
@@ -62,11 +62,13 @@ const Interface = (() => {
             {repo: "https://github.com/HarryAhnHS/battleship", 
             live: "https://harryahnhs.github.io/battleship/"}
         );                   
+
+        return storage;
     }
 
     return {
         setStorage
     }
-})
+})();
 
 export default Interface;

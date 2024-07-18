@@ -50,21 +50,21 @@ const Interface = (() => {
 
         storage.addProject(ThingsToDo, "ThingsToDo", 
             "Todo list with fully customizable projects & todos. Automatically save content using localStorage API.",
-            ["HTML", "CSS", "JS"], 
+            ["HTML", "CSS", "JS", "npm"], 
             {repo: "https://github.com/HarryAhnHS/thingsToDo", 
             live: "https://harryahnhs.github.io/thingsToDo/"}
         );
 
         storage.addProject(MyObservatory, "My Observatory", 
             "Simple weather app to query any location for real time data using WeatherAPI.",
-            ["HTML", "CSS", "JS"], 
+            ["HTML", "CSS", "JS", "npm"], 
             {repo: "https://github.com/HarryAhnHS/my-observatory", 
             live: "https://harryahnhs.github.io/my-observatory/"}
         );
 
         storage.addProject(Battleship, "Battleship", 
             "PvC battleship game. Interactively drag, drop, and rotate ships, and battle an intelligent agent making computer decisions.",
-            ["HTML", "CSS", "JS"], 
+            ["HTML", "CSS", "JS", "npm"], 
             {repo: "https://github.com/HarryAhnHS/battleship", 
             live: "https://harryahnhs.github.io/battleship/"}
         );                   
@@ -78,12 +78,42 @@ const Interface = (() => {
             const projectCard = document.createElement('div');
             projectCard.classList.add("project");
 
-                const projectData = document.createElement('div');
-                projectData.classList.add("project-data");
+                const projectMain = document.createElement('div');
+                projectMain.classList.add("project-main");
 
-                    const img = document.createElement('div');
-                    img.classList.add("project-img");
-                    img.style['background-image'] = `url(${project.screenshot})`;
+                    const projectAside = document.createElement('div');
+                    projectAside.classList.add("project-aside");
+
+                        const img = document.createElement('div');
+                        img.classList.add("project-img");
+                        img.style['background-image'] = `url(${project.screenshot})`;
+                    
+                    projectAside.appendChild(img);
+
+                    const projectText = document.createElement('div');
+                    projectText.classList.add("project-text");
+
+                        // Icon for live click 
+                        const live = document.createElement('div');
+                        live.classList.add("project-live");
+
+                        const name = document.createElement('div');
+                        name.classList.add("project-name");
+                        name.textContent = project.name;
+
+                        const desc = document.createElement('p');
+                        desc.classList.add("project-desc");
+                        desc.textContent = project.desc;
+                    
+                    projectText.appendChild(live);
+                    projectText.appendChild(name);
+                    projectText.appendChild(desc);
+
+                projectMain.appendChild(projectAside);
+                projectMain.appendChild(projectText);
+
+                const projectFoot = document.createElement('div');
+                projectFoot.classList.add("project-foot");
 
                     const tools = document.createElement('div');
                     tools.classList.add('project-tools');
@@ -95,45 +125,21 @@ const Interface = (() => {
 
                         tools.appendChild(icon);
                     })
-                
-                projectData.appendChild(img);
-                projectData.appendChild(tools);
 
-                const projectText = document.createElement('div');
-                projectText.classList.add("project-text");
+                    const repo = document.createElement('div');
+                    repo.classList.add("project-repo");
 
-                    const head = document.createElement('div');
-                    head.classList.add("project-head");
-
-                        // Icon for live click 
-                        const live = document.createElement('div');
-                        live.classList.add("project-live");
-
-                        const name = document.createElement('h1');
-                        name.classList.add("project-name");
-                        name.textContent = project.name;
-
-                        const repo = document.createElement('div');
-                        repo.classList.add("project-repo");
-
-                            const hyperlink = document.createElement('a');
-                            hyperlink.setAttribute('href', `${project.links.repo}`);
-                        
-                        repo.appendChild(hyperlink);
+                        const hyperlink = document.createElement('a');
+                        hyperlink.setAttribute('href', `${project.links.repo}`);
                     
-                    head.appendChild(name);
-                    head.appendChild(repo);
+                    repo.appendChild(hyperlink);
 
-                    const desc = document.createElement('p');
-                    desc.classList.add("project-desc");
-                    desc.textContent = project.desc;
+                projectFoot.appendChild(tools);
+                projectFoot.appendChild(repo);
+                        
                 
-                projectText.appendChild(live);
-                projectText.appendChild(head);
-                projectText.appendChild(desc);
-            
-            projectCard.appendChild(projectData);
-            projectCard.appendChild(projectText);
+            projectCard.appendChild(projectMain);
+            projectCard.appendChild(projectFoot);
 
         projectsWrapper.appendChild(projectCard);
         }

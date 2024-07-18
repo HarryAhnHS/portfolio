@@ -3,16 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template</title>
+    <title>Harry Ahn</title>
 <script defer src="main.js"></script></head>
 <body>
-    <div class="footer">
-        &copy; Copyright by @HarryAhnHS 
-        <a href="https://github.com/HarryAhnHS" class="github-a" target="_blank">
-            <div class="github-logo">
-                <img id="github" alt="github">
+    <header>
+        <h1>Harry Ahn</h1>
+        <h4>Software Engineer</h4>
+        <p>I am an aspiring software engineer with meticulous attention to detail.</p>
+        <nav>
+            <a href="#about" class="about active">
+                <span class="nav-indicator"></span>
+                <p>About</p>
+            </a>
+            <a href="#projects" class="projects">
+                <span class="nav-indicator"></span>
+                <p>Projects</p>
+            </a>
+        </nav>
+        <ul>
+            <li><a href="https://github.com/HarryAhnHS" target="_blank"><div class="socials-icon github"></div></a></li>
+            <li><a href="https://www.linkedin.com/in/hongsuh-ahn-b7520a188/" target="_blank"><div class="socials-icon linkedin"></div></a></li>
+            <li><a href="mailto:harryahn@usc.edu"><div class="socials-icon email"></div></a></li>
+        </ul>
+    </header>
+    <main>
+        <section id="about">
+            <div class="toggle-wrapper">
+                <button class="toggle"></button>
             </div>
-        </a>
-    </div>
+
+            <div class="about-content">
+                <h1>Welcome.</h1>
+                <p>
+                    My name is Harry Ahn. I'm an undergraduate student at USC Viterbi School of Engineering. I'm an aspiring software developer with a goal to craft engaging digital experiences. I'm currently completing The Odin Project bootcamp.
+                </p>
+            </div>
+        </section>
+        <section id="projects">
+            <div class="project-content">
+                <h1>My Projects</h1>
+                <div class="projects-wrapper"></div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>

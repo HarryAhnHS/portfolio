@@ -373,6 +373,7 @@ body.dark > main > #about > .toggle-wrapper > .toggle{
     align-items: center;
 
     font-size: 32px;
+    font-weight: 500;
 
     margin: 0px;
 }
@@ -440,7 +441,7 @@ body.dark > main > #about > .toggle-wrapper > .toggle{
     flex: 1;
     display: flex;
     justify-content: flex-start;
-    align-content: center;
+    align-items: center;
 
     gap: 15px;
 }
@@ -508,7 +509,7 @@ body.dark > main > #about > .toggle-wrapper > .toggle{
     }
 
     header {
-        height: 160px;
+        height: 100px;
         width: 100%;
         padding: 0;
         top: 0;
@@ -516,19 +517,15 @@ body.dark > main > #about > .toggle-wrapper > .toggle{
         z-index: 1;
     }
 
-    header > h1 {
-        font-size: 36px;
-        margin: 0 auto;
-        padding: 0;
-    }
-
-    header > h4, header > p {
+    header > h1, header > h4, header > p {
         display: none;
     }
 
     nav {
         flex-direction: row;
         justify-content: center;
+        align-items: center;
+        margin-top: 15px;
     }
 
     nav > a{
@@ -538,14 +535,14 @@ body.dark > main > #about > .toggle-wrapper > .toggle{
 
     ul {
         margin: 0;
-        margin-bottom: 15px;
+        margin-bottom: 5px;
     }
 
     .toggle-wrapper {
         position: fixed;
         z-index: 1;
 
-        top: 25px;
+        top: 60px;
         right: 25px;
     }
 
@@ -553,7 +550,24 @@ body.dark > main > #about > .toggle-wrapper > .toggle{
         width: 100%;
 
         position: absolute;
-        top: 160px;
+        top: 100px;
+
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .project-tools {
+        gap: 5px;
     }
 
+    .tool {
+        width: 16px;
+        height: 16px;
+    }
+
+    .project-name {
+        font-size: 20px;
+    }
 }

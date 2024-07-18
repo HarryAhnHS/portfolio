@@ -170,7 +170,7 @@ const Interface = (() => {
             // Need to subtract arbitrary value - 
             sections.forEach((section) => {
               const sectionTop = section.offsetTop;
-              if (window.scrollY >= sectionTop - 60) { 
+              if (window.scrollY >= sectionTop - 100) { 
                 current = section.getAttribute("id"); }
             });
           

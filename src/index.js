@@ -5,4 +5,4 @@ import ProjectList from "./modules/project";
 
 // document.getElementById("github").src = Git; // Fill github logo
 
-console.log(Interface.setStorage());
+Interface.init();

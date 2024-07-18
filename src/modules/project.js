@@ -23,11 +23,6 @@ class ProjectList {
         const newProj = new Project(screenshot, name, desc, tools, links);
         this.projectList.unshift(newProj);
     }
-
-    deleteProject(name) {
-        const newProj = new Project(screenshot, name, desc, tools, links);
-        this.projectList.push(newProj);
-    }
 }
 
 export default ProjectList;

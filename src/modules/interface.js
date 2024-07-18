@@ -10,6 +10,12 @@ import Battleship from "../assets/screenshots/battleship.png";
 
 
 const Interface = (() => {
+    function init() {
+        const storage = setStorage();
+        console.log(storage);
+        displayProjects(storage);
+    }
+
     function setStorage() {
         // Manual storage selection
         const storage = new ProjectList();
@@ -63,15 +69,78 @@ const Interface = (() => {
             live: "https://harryahnhs.github.io/battleship/"}
         );                   
 
-        return storage;
+        return storage.projectList;
     }
 
-    function showProjects() {
-        
+    function displayProjects(projectList) {
+        const projectsWrapper = document.querySelector(".projects-wrapper")
+        for (const project of projectList) {
+            const projectCard = document.createElement('div');
+            projectCard.classList.add("project");
+
+                const projectData = document.createElement('div');
+                projectData.classList.add("project-data");
+
+                    const img = document.createElement('div');
+                    img.classList.add("project-img");
+                    img.style['background-image'] = `url(${project.screenshot})`;
+
+                    const tools = document.createElement('div');
+                    tools.classList.add('project-tools');
+
+                    project.tools.forEach((tool) => {
+                        const icon = document.createElement('div');
+                        icon.classList.add("tool");
+                        icon.classList.add(tool);
+
+                        tools.appendChild(icon);
+                    })
+                
+                projectData.appendChild(img);
+                projectData.appendChild(tools);
+
+                const projectText = document.createElement('div');
+                projectText.classList.add("project-text");
+
+                    const head = document.createElement('div');
+                    head.classList.add("project-head");
+
+                        // Icon for live click 
+                        const live = document.createElement('div');
+                        live.classList.add("project-live");
+
+                        const name = document.createElement('h1');
+                        name.classList.add("project-name");
+                        name.textContent = project.name;
+
+                        const repo = document.createElement('div');
+                        repo.classList.add("project-repo");
+
+                            const hyperlink = document.createElement('a');
+                            hyperlink.setAttribute('href', `${project.links.repo}`);
+                        
+                        repo.appendChild(hyperlink);
+                    
+                    head.appendChild(name);
+                    head.appendChild(repo);
+
+                    const desc = document.createElement('p');
+                    desc.classList.add("project-desc");
+                    desc.textContent = project.desc;
+                
+                projectText.appendChild(live);
+                projectText.appendChild(head);
+                projectText.appendChild(desc);
+            
+            projectCard.appendChild(projectData);
+            projectCard.appendChild(projectText);
+
+        projectsWrapper.appendChild(projectCard);
+        }
     }
 
     return {
-        setStorage
+        init
     }
 })();
 

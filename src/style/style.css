@@ -211,18 +211,45 @@ main {
     height: 80px;
 }
 
-.project-link {
-    margin-top: 5px;
+.project-tools {
+    margin-top: 10px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-evenly;
+
+    gap: 5px;
 }
 
 .project-text{
     padding: 15px;
+
+    position: relative;
 }
 
-.project-name {
+.project-head {
+    display: flex;
+    align-items: center;
+}
+
+.project-head > h1 {
     font-size: 32px;
+    flex: 1;
 
     margin: 0px;
+}
+
+.project-repo {
+    margin-right: 15px;
+}
+
+.project-live {
+    font-size: 24px;
+
+    position: absolute;
+    top: 5px;
+    right: 10px;
 }
 
 .project-desc {
@@ -233,6 +260,13 @@ main {
     margin: 0px;
 }
 
+/* Tool Icon Styling */
+.tool {
+    width: 10px;
+    height: 10px;
+
+    background-color: red;
+}
 
 .footer {
     font-family: 'Urbanist', sans-serif;

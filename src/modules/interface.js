@@ -90,62 +90,70 @@ const Interface = (() => {
                     
                     projectAside.appendChild(img);
 
-                    const projectText = document.createElement('div');
-                    projectText.classList.add("project-text");
+                    const projectRight = document.createElement('div');
+                    projectRight.classList.add("project-right");
 
-                        // Icon to demonstrate live  
-                        const live = document.createElement('div');
-                        live.classList.add("live-icon");
+                        const projectText = document.createElement('div');
+                        projectText.classList.add("project-text");
+                            // Icon to demonstrate live  
+                            const live = document.createElement('div');
+                            live.classList.add("live-icon");
 
-                        const name = document.createElement('div');
-                        name.classList.add("project-name");
-                        name.textContent = project.name;
+                            const name = document.createElement('div');
+                            name.classList.add("project-name");
+                            name.textContent = project.name;
 
-                        const desc = document.createElement('p');
-                        desc.classList.add("project-desc");
-                        desc.textContent = project.desc;
+                            const desc = document.createElement('p');
+                            desc.classList.add("project-desc");
+                            desc.textContent = project.desc;
+                        
+                        projectText.appendChild(live);
+                        projectText.appendChild(name);
+                        projectText.appendChild(desc);
+
+                        const projectFoot = document.createElement('div');
+                        projectFoot.classList.add("project-foot");
+
+                        const tools = document.createElement('div');
+                        tools.classList.add('project-tools');
+
+                        project.tools.forEach((tool) => {
+                            const icon = document.createElement('div');
+                            icon.classList.add("tool");
+                            icon.classList.add(tool.toString().toUpperCase());
+
+                            tools.appendChild(icon);
+                        })
+
+                        const repo = document.createElement('div');
+                        repo.classList.add("project-repo");
+
+                            const hyperlink = document.createElement('a');
+                            hyperlink.setAttribute('href', `${project.links.repo}`);
+                            hyperlink.setAttribute('target', `_blank`);
+
+                                const repoIcon = document.createElement('div');
+                                repoIcon.classList.add('repo-icon');
+
+                            hyperlink.appendChild(repoIcon);        
+                            
+                        repo.appendChild(hyperlink);
+
+                        projectFoot.appendChild(tools);                        
+                        projectFoot.appendChild(repo);  
                     
-                    projectText.appendChild(live);
-                    projectText.appendChild(name);
-                    projectText.appendChild(desc);
+                    projectRight.appendChild(projectText);
+                    projectRight.appendChild(projectFoot);
 
                 projectMain.appendChild(projectAside);
-                projectMain.appendChild(projectText);
-
-                const projectFoot = document.createElement('div');
-                projectFoot.classList.add("project-foot");
-
-                    const tools = document.createElement('div');
-                    tools.classList.add('project-tools');
-
-                    project.tools.forEach((tool) => {
-                        const icon = document.createElement('div');
-                        icon.classList.add("tool");
-                        icon.classList.add(tool.toString().toUpperCase());
-
-                        tools.appendChild(icon);
-                    })
-
-                    const repo = document.createElement('div');
-                    repo.classList.add("project-repo");
-
-                        const hyperlink = document.createElement('a');
-                        hyperlink.setAttribute('href', `${project.links.repo}`);
-
-                            const repoIcon = document.createElement('div');
-                            repoIcon.classList.add('repo-icon');
-
-                        hyperlink.appendChild(repoIcon);
-                            
-                    
-                    repo.appendChild(hyperlink);
-
-                projectFoot.appendChild(tools);
-                projectFoot.appendChild(repo);
-                        
+                projectMain.appendChild(projectRight);
                 
             projectCard.appendChild(projectMain);
-            projectCard.appendChild(projectFoot);
+
+            projectCard.onclick = (e) =>{
+                e.preventDefault();
+                window.open(project.links.live, '_blank').focus();
+            }
 
         projectsWrapper.appendChild(projectCard);
         }

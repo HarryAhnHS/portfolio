@@ -12,7 +12,7 @@ html {
     --main-text-color: black;
     --main-subtext-color: rgb(93, 93, 93);
 
-    --accent-color: #f4d35e;
+    --accent-color: #ff715b;
 }
 
 img {
@@ -114,7 +114,8 @@ nav > a:visited {
     transition: width 0.5s;
 }
 
-nav > a:hover > .nav-indicator {
+nav > a:hover > .nav-indicator,
+nav > a:focus > .nav-indicator {
     width: 50px;
 }
 
@@ -185,7 +186,8 @@ li > a {
     margin: 3px;
 }
 
-li > a:hover > .socials-icon {
+li > a:hover > .socials-icon,
+li > a:focus > .socials-icon {
     background-color: var(--header-text-color);
 }
 
@@ -206,7 +208,7 @@ main {
 
 #about {
     padding-top: 25px;
-    height: 80vh;
+    padding-bottom: 50px;
 }
 
 /* Theme toggle */
@@ -251,6 +253,7 @@ main {
 /* Page 2 - Projects  */
 
 #projects {
+    /*  */
 }
 
 .project-content {
@@ -271,6 +274,10 @@ main {
     border-radius: 5px;
 
     margin-top: 25px;
+
+    cursor: pointer;
+
+    transition: all 0.3s;
 }
 
 .project-main {
@@ -279,16 +286,22 @@ main {
 
 .project-aside {
     padding: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-right {
+    flex: 1;
+
+    padding: 15px;
 }
 
 .project-img {
     /* Temp */
-    background-color: black;
-    
-    margin-top: 15px;
-
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100%;
 
     background-repeat: no-repeat;
     background-position: center center;
@@ -298,8 +311,6 @@ main {
 }
 
 .project-text{
-    padding: 15px;
-
     position: relative;
 
     display: flex;
@@ -311,9 +322,10 @@ main {
     align-items: center;
 
     font-size: 32px;
-    flex: 1;
 
     margin: 0px;
+
+    transition: all 0.3s;
 }
 
 .project-desc {
@@ -326,21 +338,27 @@ main {
 
 .project-foot {
     display: flex;
+
+    padding-top: 15px;
 }
 
 /* Github repo + live icon */
 
 .project-repo {
-    width: 24px;
-    height: 24px;
+    transition: all 0.3s;
+}
+
+.project-repo > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     margin-right: 15px;
-    margin-bottom: 15px;
 }
 
 .repo-icon {
-    width: 25px;
-    height: 25px;
+    width: 22px;
+    height: 22px;
 
     background-color: var(--main-subtext-color);
     -webkit-mask-image: url("../assets/icons/socials/github.svg");
@@ -348,32 +366,31 @@ main {
     mask-repeat: no-repeat;
 
     display: inline-block;
+
+    transition: all 0.3s;
 }
 
 .live-icon {
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
 
     position: absolute;
     top: 25px;
     right: 25px;
 
-    background-color: var(--main-subtext-color);
+    background-color: transparent;
     -webkit-mask-image: url("../assets/icons/local/arrow.svg");
     mask-image: url("../assets/icons/local/arrow.svg");
     mask-repeat: no-repeat;
 
     display: inline-block;
+
+    transition: all 0.15s;
 }
 
 /* Tool Icon Styling */
 .project-tools {
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-bottom: 15px;
-
     flex: 1;
-
     display: flex;
     justify-content: flex-start;
     align-content: center;
@@ -413,35 +430,22 @@ main {
     background-image: url("../assets/icons/tools/npm.svg");
 }
 
-.footer {
-    font-family: 'Urbanist', sans-serif;
-
-    background-color: white;
-    color: black;
-    height: 100px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-size: 12px;
+/* Project hover */
+.project:hover, .project:focus {
+    transform: scale(1.05);
 }
 
-.github-logo {
-    margin-left: 10px;
-    width: 24px;
-    height: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.project:hover > .project-main > .project-right > .project-text > .live-icon {
+    top: 15px;
+    right: 15px;
+
+    background-color: var(--accent-color);
 }
 
-.github-a img{
-    opacity: 0.5;
-    transition: all 300ms;
+.repo-icon:hover {
+    background-color: var(--accent-color);
 }
 
-.github-a img:hover {
-    opacity: 1;
-    transform: rotate(360deg) scale(1.1);
+.project:hover > .project-main > .project-right > .project-text > .project-name {
+    color: var(--accent-color);
 }

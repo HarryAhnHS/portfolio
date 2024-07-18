@@ -6,9 +6,11 @@ html {
     /* Custom properties for theme */
     --header-color: #0d3b66;
     --header-text-color: #edf6f9;
+    --header-subtext-color: #bcd4dc;
 
     --main-background-color: white;
     --main-text-color: black;
+    --main-subtext-color: rgb(93, 93, 93);
 
     --accent-color: #f4d35e;
 }
@@ -43,8 +45,12 @@ header {
     padding-left: 50px;
     padding-right: 50px;
     padding-top: 100px;
+    padding-bottom: 100px;
 
     box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
 }
 
 header > h1 {
@@ -63,6 +69,8 @@ header > h4 {
 header > p {
     font-weight: 200;
     margin: 0px;
+
+    color: var(--header-subtext-color);
 }
 
 /* Navbar */
@@ -71,9 +79,11 @@ nav {
     display: flex;
     flex-direction: column;
 
-    margin-top: 15px;
+    margin-top: 30px;
 
     width: 50%;
+
+    flex: 1;
 }
 
 nav > a {
@@ -82,6 +92,8 @@ nav > a {
 
     display: flex;
     align-items: center;
+
+    margin: 5px;
 }
 
 nav > a:visited {
@@ -113,24 +125,114 @@ nav > a > p {
 
 ul {
     list-style-type: none;
+    display: flex;
+
+    padding: 0px;
 }
 
 li > a {
     text-decoration: none;
     color: inherit;
+    margin: 5px;
 }
+
+/* Main content */
 
 main {
     width: 60%;
+
+    box-sizing: border-box;
+
+    padding: 15px;
 }
+
+/* Page 1 - About section */
 
 #about {
-    height: 100vh;
+    height: 80vh;
 }
 
-#projects {
-    height: 100vh;
+/* Theme toggle */
+.toggle-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
+
+.about-content {
+    padding-top: 50px;
+}
+
+.about-content > h1 {
+    font-size: 84px;
+    font-weight: 100;
+
+    margin: 0px;
+}
+
+/* Page 2 - Projects  */
+
+#projects {
+    height: 100vh; 
+    /* remove */
+}
+
+.project-content {
+    padding-top: 50px;
+}
+
+.project-content > h1 {
+    font-size: 32px;
+    font-weight: 100;
+
+    margin: 0px;
+}
+
+/* Project Cards */
+.project {
+    display: flex;
+
+    outline: 1px solid black;
+
+    margin-top: 15px;
+}
+
+.project-data {
+    padding:15px;
+}
+
+.project-img {
+    /* Temp */
+    background-color: black;
+    
+    margin-top: 15px;
+
+    width: 120px;
+    height: 80px;
+}
+
+.project-link {
+    margin-top: 5px;
+}
+
+.project-text{
+    padding: 15px;
+}
+
+.project-name {
+    font-size: 32px;
+
+    margin: 0px;
+}
+
+.project-desc {
+    font-size: 16px;
+
+    color: var(--main-subtext-color);
+
+    margin: 0px;
+}
+
 
 .footer {
     font-family: 'Urbanist', sans-serif;

@@ -12,8 +12,8 @@ import Battleship from "../assets/screenshots/battleship.png";
 const Interface = (() => {
     function init() {
         const storage = setStorage();
-        console.log(storage);
         displayProjects(storage);
+        toggleTheme();
     }
 
     function setStorage() {
@@ -156,6 +156,13 @@ const Interface = (() => {
             }
 
         projectsWrapper.appendChild(projectCard);
+        }
+    }
+
+    function toggleTheme() {
+        const btn = document.querySelector(".toggle");
+        btn.onclick = (e) => {
+            document.body.classList.toggle("dark");
         }
     }
 

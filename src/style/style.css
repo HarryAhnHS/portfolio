@@ -3,16 +3,6 @@
 
 html {
     scroll-behavior: smooth ;
-    /* Custom properties for theme */
-    --header-color: #0d3b66;
-    --header-text-color: #edf6f9;
-    --header-subtext-color: #a9c1c9c7;
-
-    --main-background-color: white;
-    --main-text-color: black;
-    --main-subtext-color: rgb(93, 93, 93);
-
-    --accent-color: #ff715b;
 }
 
 img {
@@ -20,14 +10,43 @@ img {
 }
 
 body {
+    background-color: var(--main-background-color);
+
+    /* Custom properties for theme */
+    --header-color: #f5f3f4;
+    --header-text-color: black;
+    --header-subtext-color: rgb(93, 93, 93);
+
+    --main-background-color: #f5f3f4;
+    --main-text-color: black;
+    --main-subtext-color: rgb(93, 93, 93);
+
+    --card-background-color: #fbf9fa;
+
+    --accent-color: #ff715b;
+
     font-family: 'Mukta', sans-serif;
     font-weight: 300;
 
     margin: 0px;
 
-
     display: flex;
     justify-content: flex-end;
+}
+
+body.dark {
+    /* Custom properties for theme */
+    --header-color: #0d1b2a;
+    --header-text-color: #f0f1ee;
+    --header-subtext-color: #d4d5d3;
+
+    --main-background-color: #0d1b2a;
+    --main-text-color: white;
+    --main-subtext-color: #d4d5d3;
+
+    --card-background-color: #1b263b;
+
+    --accent-color: #ff715b;
 }
 
 /* Header content */
@@ -44,8 +63,8 @@ header {
 
     padding-left: 50px;
     padding-right: 50px;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 130px;
+    padding-bottom: 130px;
 
     box-sizing: border-box;
 
@@ -194,6 +213,9 @@ li > a:focus > .socials-icon {
 /* Main content */
 
 main {
+    background-color: var(--main-background-color);
+    color: var(--main-text-color);
+
     width: 60%;
 
     box-sizing: border-box;
@@ -218,19 +240,29 @@ main {
     justify-content: flex-end;
 }
 
-.theme {
-    background-color: black;
+/* Default theme */
+.toggle {
+    background-color: var(--main-subtext-color);
     -webkit-mask-image: url("../assets/icons/local/sun.svg");
     mask-image: url("../assets/icons/local/sun.svg");
     mask-repeat: no-repeat;
 
     display: inline-block;
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
+
+    cursor: pointer;
+
+    transition: background-color 0.15s;
 }
 
-.theme.dark {
-    background-color: white;
+.toggle:hover,
+.toggle:focus {
+    background-color: var(--main-text-color);
+}
+
+/* Dark mode */
+body.dark > main > #about > .toggle-wrapper > .toggle{
     -webkit-mask-image: url("../assets/icons/local/moon.svg");
     mask-image: url("../assets/icons/local/moon.svg");
 }
@@ -248,13 +280,10 @@ main {
 
 .about-content > p {
     font-size: 20px;
+    color: var(--main-subtext-color);
 }
 
 /* Page 2 - Projects  */
-
-#projects {
-    /*  */
-}
 
 .project-content {
     padding-top: 50px;
@@ -269,6 +298,8 @@ main {
 
 /* Project Cards */
 .project {
+    background-color: var(--card-background-color);
+
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
     border-radius: 5px;
@@ -277,7 +308,7 @@ main {
 
     cursor: pointer;
 
-    transition: all 0.3s;
+    transition: transform 0.3s;
 }
 
 .project-main {
@@ -324,15 +355,11 @@ main {
     font-size: 32px;
 
     margin: 0px;
-
-    transition: all 0.3s;
 }
 
 .project-desc {
     font-size: 16px;
-
     color: var(--main-subtext-color);
-
     margin: 0px;
 }
 
@@ -432,7 +459,7 @@ main {
 
 /* Project hover */
 .project:hover, .project:focus {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 .project:hover > .project-main > .project-right > .project-text > .live-icon {
@@ -444,6 +471,7 @@ main {
 
 .repo-icon:hover {
     background-color: var(--accent-color);
+    transform: rotate(360deg);
 }
 
 .project:hover > .project-main > .project-right > .project-text > .project-name {

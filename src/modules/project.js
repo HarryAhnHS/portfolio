@@ -30,4 +30,4 @@ class ProjectList {
     }
 }
 
-export default {Project, ProjectList};
+export {Project, ProjectList};

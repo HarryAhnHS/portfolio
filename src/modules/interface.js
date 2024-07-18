@@ -14,6 +14,7 @@ const Interface = (() => {
         const storage = setStorage();
         displayProjects(storage);
         toggleTheme();
+        scrollNavLinkActive();
     }
 
     function setStorage() {
@@ -157,6 +158,30 @@ const Interface = (() => {
 
         projectsWrapper.appendChild(projectCard);
         }
+    }
+
+    function scrollNavLinkActive() {
+        window.onscroll = () => {
+            var current = "";
+            const sections = document.querySelectorAll("section");
+        
+            // Get each section offsetTop property, compare with scroll Y
+            // If scrollY is within section, then add it as a class to nav element
+            // Need to subtract arbitrary value - 
+            sections.forEach((section) => {
+              const sectionTop = section.offsetTop;
+              if (window.scrollY >= sectionTop - 60) { 
+                current = section.getAttribute("id"); }
+            });
+          
+            const navLinks = document.querySelectorAll("nav > a");
+            navLinks.forEach((a) => {
+              a.classList.remove("active");
+              if (a.classList.contains(current)) {
+                a.classList.add("active");
+              }
+            });
+          };
     }
 
     function toggleTheme() {

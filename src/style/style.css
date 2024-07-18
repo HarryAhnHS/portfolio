@@ -121,6 +121,28 @@ nav > a:visited {
     color: inherit;
 }
 
+/* Nav active states */
+nav > a.active > .nav-indicator {
+    width: 50px;
+    border-color: var(--accent-color);
+}
+
+nav > a.active {
+    color: var(--accent-color);
+}
+
+/* Nav hover */
+nav > a:hover > .nav-indicator,
+nav > a:focus > .nav-indicator {
+    width: 50px;
+    border-color: var(--accent-color);
+}
+
+nav > a:hover,
+nav > a:focus {
+    color: var(--accent-color);
+}
+
 .nav-indicator {
     margin-left: 10px;
     margin-right: 10px;
@@ -131,11 +153,8 @@ nav > a:visited {
     border-top: 1px solid var(--header-text-color);
 
     transition: width 0.5s;
-}
 
-nav > a:hover > .nav-indicator,
-nav > a:focus > .nav-indicator {
-    width: 50px;
+    pointer-events: none;
 }
 
 nav > a > p {
@@ -146,7 +165,8 @@ nav > a > p {
 
     font-size: 18px;
     font-weight: 600;
-
+    
+    pointer-events: none;
 }
 
 /* Links styling */

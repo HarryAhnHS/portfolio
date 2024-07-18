@@ -93,9 +93,9 @@ const Interface = (() => {
                     const projectText = document.createElement('div');
                     projectText.classList.add("project-text");
 
-                        // Icon for live click 
+                        // Icon to demonstrate live  
                         const live = document.createElement('div');
-                        live.classList.add("project-live");
+                        live.classList.add("live-icon");
 
                         const name = document.createElement('div');
                         name.classList.add("project-name");
@@ -131,6 +131,12 @@ const Interface = (() => {
 
                         const hyperlink = document.createElement('a');
                         hyperlink.setAttribute('href', `${project.links.repo}`);
+
+                            const repoIcon = document.createElement('div');
+                            repoIcon.classList.add('repo-icon');
+
+                        hyperlink.appendChild(repoIcon);
+                            
                     
                     repo.appendChild(hyperlink);
 

@@ -224,7 +224,7 @@ main {
 
     display: inline-block;
     width: 25px;
-    height: 30px;
+    height: 25px;
 }
 
 .theme.dark {
@@ -301,6 +301,9 @@ main {
     padding: 15px;
 
     position: relative;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .project-name  {
@@ -311,14 +314,6 @@ main {
     flex: 1;
 
     margin: 0px;
-}
-
-.project-live {
-    font-size: 24px;
-
-    position: absolute;
-    top: 5px;
-    right: 10px;
 }
 
 .project-desc {
@@ -333,8 +328,49 @@ main {
     display: flex;
 }
 
+/* Github repo + live icon */
+
+.project-repo {
+    width: 24px;
+    height: 24px;
+
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+.repo-icon {
+    width: 25px;
+    height: 25px;
+
+    background-color: var(--main-subtext-color);
+    -webkit-mask-image: url("../assets/icons/socials/github.svg");
+    mask-image: url("../assets/icons/socials/github.svg");
+    mask-repeat: no-repeat;
+
+    display: inline-block;
+}
+
+.live-icon {
+    width: 18px;
+    height: 18px;
+
+    position: absolute;
+    top: 25px;
+    right: 25px;
+
+    background-color: var(--main-subtext-color);
+    -webkit-mask-image: url("../assets/icons/local/arrow.svg");
+    mask-image: url("../assets/icons/local/arrow.svg");
+    mask-repeat: no-repeat;
+
+    display: inline-block;
+}
+
+/* Tool Icon Styling */
 .project-tools {
-    margin: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
 
     flex: 1;
 
@@ -342,15 +378,9 @@ main {
     justify-content: flex-start;
     align-content: center;
 
-
-    gap: 10px;
+    gap: 15px;
 }
 
-.project-repo {
-    margin-right: 15px;
-}
-
-/* Tool Icon Styling */
 .tool {
     width: 20px;
     height: 20px;

@@ -1,8 +1,14 @@
-import Project from "./project";
+import {Project, ProjectList} from "./project";
+
 
 const Interface = (() => {
-    function newProject(screenshot, name, desc, tools, links) {
-        // Convert new project into UI and add
+    function setStorage() {
+        const storage = new ProjectList();
+        storage.addProject("");
+    }
+
+    return {
+        setStorage
     }
 })
 

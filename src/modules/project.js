@@ -13,13 +13,21 @@ class ProjectList {
         this.projectList;
     }
 
+    getProject(name) {
+        return this.projectList.find((project) => {
+            project.name == name;
+        })
+    }
+
     addProject(screenshot, name, desc, tools, links) {
         const newProj = new Project(screenshot, name, desc, tools, links);
         this.projectList.push(newProj);
     }
 
-    deleteProject(screenshot, name, desc, tools, links) {
+    deleteProject(name) {
         const newProj = new Project(screenshot, name, desc, tools, links);
         this.projectList.push(newProj);
     }
 }
+
+export default {Project, ProjectList};

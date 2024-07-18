@@ -119,6 +119,12 @@ nav > a:hover > .nav-indicator {
 nav > a > p {
     text-transform: uppercase;
     margin: 0px;
+
+    text-transform: uppercase;
+
+    font-size: 18px;
+    font-weight: 600;
+
 }
 
 /* Links styling */
@@ -134,6 +140,8 @@ li > a {
     text-decoration: none;
     color: inherit;
     margin: 5px;
+
+    text-transform: uppercase;
 }
 
 /* Main content */
@@ -143,12 +151,16 @@ main {
 
     box-sizing: border-box;
 
-    padding: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    padding-bottom: 50px;
 }
 
 /* Page 1 - About section */
 
 #about {
+    padding-top: 15px;
     height: 80vh;
 }
 
@@ -170,11 +182,13 @@ main {
     margin: 0px;
 }
 
+.about-content > p {
+    font-size: 20px;
+}
+
 /* Page 2 - Projects  */
 
 #projects {
-    height: 100vh; 
-    /* remove */
 }
 
 .project-content {
@@ -192,13 +206,15 @@ main {
 .project {
     display: flex;
 
-    outline: 1px solid black;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
-    margin-top: 15px;
+    border-radius: 5px;
+
+    margin-top: 25px;
 }
 
 .project-data {
-    padding:15px;
+    padding: 15px;
 }
 
 .project-img {
@@ -207,8 +223,12 @@ main {
     
     margin-top: 15px;
 
-    width: 120px;
-    height: 80px;
+    width: 140px;
+    height: 100px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .project-tools {
@@ -262,8 +282,8 @@ main {
 
 /* Tool Icon Styling */
 .tool {
-    width: 10px;
-    height: 10px;
+    width: 20px;
+    height: 20px;
 
     background-color: red;
 }

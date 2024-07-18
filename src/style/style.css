@@ -6,7 +6,7 @@ html {
     /* Custom properties for theme */
     --header-color: #0d3b66;
     --header-text-color: #edf6f9;
-    --header-subtext-color: #bcd4dc;
+    --header-subtext-color: #a9c1c9c7;
 
     --main-background-color: white;
     --main-text-color: black;
@@ -57,7 +57,9 @@ header > h1 {
     font-size: 48px;
     font-weight: 600;
     margin: 0px;
+    margin-left: -5px;
 
+    padding-bottom: 15px;
 }
 
 header > h4 {
@@ -79,9 +81,7 @@ nav {
     display: flex;
     flex-direction: column;
 
-    margin-top: 30px;
-
-    width: 50%;
+    justify-content: center;
 
     flex: 1;
 }
@@ -92,6 +92,8 @@ nav > a {
 
     display: flex;
     align-items: center;
+
+    width: 150px;
 
     margin: 5px;
 }
@@ -133,15 +135,58 @@ ul {
     list-style-type: none;
     display: flex;
 
+    justify-content: center;
+
     padding: 0px;
+    margin-bottom: 50px;;
 }
 
 li > a {
     text-decoration: none;
     color: inherit;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.socials-icon {
+    background-color: var(--header-subtext-color);
+    background-position: center;
+    mask-repeat: no-repeat;
+
+    width: 28px;
+    height: 28px;
+
     margin: 5px;
 
-    text-transform: uppercase;
+    display: inline-block;
+}
+
+.socials-icon.github {
+    -webkit-mask-image: url("../assets/icons/socials/github.svg");
+    mask-image: url("../assets/icons/socials/github.svg");
+}
+
+.socials-icon.linkedin {
+    -webkit-mask-image: url("../assets/icons/socials/linkedin.svg");
+    mask-image: url("../assets/icons/socials/linkedin.svg");
+}
+
+.socials-icon.email {
+    -webkit-mask-image: url("../assets/icons/socials/email.svg");
+    mask-image: url("../assets/icons/socials/email.svg");
+
+    width: 32px;
+    height: 32px;
+    margin: 3px;
+}
+
+li > a:hover > .socials-icon {
+    background-color: var(--header-text-color);
 }
 
 /* Main content */
@@ -160,7 +205,7 @@ main {
 /* Page 1 - About section */
 
 #about {
-    padding-top: 15px;
+    padding-top: 25px;
     height: 80vh;
 }
 
@@ -169,6 +214,23 @@ main {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+}
+
+.theme {
+    background-color: black;
+    -webkit-mask-image: url("../assets/icons/local/sun.svg");
+    mask-image: url("../assets/icons/local/sun.svg");
+    mask-repeat: no-repeat;
+
+    display: inline-block;
+    width: 25px;
+    height: 30px;
+}
+
+.theme.dark {
+    background-color: white;
+    -webkit-mask-image: url("../assets/icons/local/moon.svg");
+    mask-image: url("../assets/icons/local/moon.svg");
 }
 
 .about-content {
@@ -282,10 +344,35 @@ main {
 
 /* Tool Icon Styling */
 .tool {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
 
-    background-color: red;
+    background-position: center;
+    background-size: contain;
+}
+
+.HTML {
+    background-image: url("../assets/icons/tools/html.svg");
+}
+
+.CSS {
+    background-image: url("../assets/icons/tools/css.svg");
+}
+
+.JS {
+    background-image: url("../assets/icons/tools/js.svg");
+}
+
+.REACT {
+    background-image: url("../assets/icons/tools/react.svg");
+}
+
+.NODEJS {
+    background-image: url("../assets/icons/tools/nodejs.svg");
+}
+
+.NPM {
+    background-image: url("../assets/icons/tools/npm.svg");
 }
 
 .footer {

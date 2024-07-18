@@ -91,7 +91,7 @@ const Interface = (() => {
                     project.tools.forEach((tool) => {
                         const icon = document.createElement('div');
                         icon.classList.add("tool");
-                        icon.classList.add(tool);
+                        icon.classList.add(tool.toString().toUpperCase());
 
                         tools.appendChild(icon);
                     })

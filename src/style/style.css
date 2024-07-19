@@ -14,8 +14,9 @@ body {
 
     /* Custom properties for theme */
     --header-color: #f5f3f4;
+    --header-color-2: #e5e5e5;
     --header-text-color: black;
-    --header-subtext-color: rgb(93, 93, 93);
+    --header-subtext-color: rgb(127, 125, 125);
 
     --main-background-color: #f5f3f4;
     --main-text-color: black;
@@ -37,6 +38,7 @@ body {
 body.dark {
     /* Custom properties for theme */
     --header-color: #0d1b2a;
+    --header-color-2: #081420;
     --header-text-color: #f0f1ee;
     --header-subtext-color: #d4d5d3;
 
@@ -276,8 +278,7 @@ main {
     transition: background-color 0.15s;
 }
 
-.toggle:hover,
-.toggle:focus {
+.toggle:hover {
     background-color: var(--main-text-color);
 }
 
@@ -514,6 +515,8 @@ body.dark > main > #about > .toggle-wrapper > .toggle{
         padding: 0;
         top: 0;
 
+        background-color: var(--header-color-2);
+
         z-index: 1;
     }
 
@@ -554,6 +557,10 @@ body.dark > main > #about > .toggle-wrapper > .toggle{
 
         padding-left: 30px;
         padding-right: 30px;
+    }
+
+    #projects {
+        padding-top: 50px;
     }
 }
 

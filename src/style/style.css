@@ -105,11 +105,14 @@ nav {
     justify-content: center;
 
     flex: 1;
+
+    color: (--header-text-color);
 }
 
 nav > a {
     text-decoration: none;
-    color: (--header-text-color);
+
+    color: inherit;
 
     display: flex;
     align-items: center;
@@ -229,7 +232,7 @@ li > a {
 
 li > a:hover > .socials-icon,
 li > a:focus > .socials-icon {
-    background-color: var(--header-text-color);
+    background-color: var(--accent-color);
 }
 
 /* Main content */
@@ -279,7 +282,7 @@ main {
 }
 
 .toggle:hover {
-    background-color: var(--main-text-color);
+    background-color: var(--accent-color);
 }
 
 /* Dark mode */

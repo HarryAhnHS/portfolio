@@ -130,8 +130,12 @@ const Interface = (() => {
                         repo.classList.add("project-repo");
 
                             const hyperlink = document.createElement('a');
-                            hyperlink.setAttribute('href', `${project.links.repo}`);
+                            // hyperlink.setAttribute('href', `${project.links.repo}`);
                             hyperlink.setAttribute('target', `_blank`);
+                            hyperlink.onclick = (e) => {
+                                e.stopPropagation();
+                                window.open(project.links.repo, '_blank').focus();
+                            }
 
                                 const repoIcon = document.createElement('div');
                                 repoIcon.classList.add('repo-icon');

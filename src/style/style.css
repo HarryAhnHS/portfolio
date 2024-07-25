@@ -482,6 +482,10 @@ body.dark > main > #about > .toggle-wrapper > .toggle{
     background-image: url("../assets/icons/tools/npm.svg");
 }
 
+.REACTBOOTSTRAP {
+    background-image: url("../assets/icons/tools/reactbootstrap.svg");
+}
+
 /* Project hover */
 .project:hover, .project:focus {
     transform: scale(1.03);

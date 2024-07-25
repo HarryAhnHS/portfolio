@@ -7,6 +7,7 @@ import TicTacToe from "../assets/screenshots/tictactoe.png";
 import ThingsToDo from "../assets/screenshots/thingstodo.png";
 import MyObservatory from "../assets/screenshots/myobservatory.png";
 import Battleship from "../assets/screenshots/battleship.png";
+import ResumeGenerator from "../assets/screenshots/resumegenerator.png"
 
 
 const Interface = (() => {
@@ -68,7 +69,14 @@ const Interface = (() => {
             ["HTML", "CSS", "JS", "npm"], 
             {repo: "https://github.com/HarryAhnHS/battleship", 
             live: "https://harryahnhs.github.io/battleship/"}
-        );                   
+        );   
+        
+        storage.addProject(ResumeGenerator, "Resume Generator", 
+            "A fully adaptive resume generator developed using ReactJS and React Bootstrap. Customize fields, categories, and styling. Completely responsive output automatically scaled with A4 aspect ratio",
+            ["react", "reactbootstrap", "CSS", "npm"], 
+            {repo: "https://github.com/HarryAhnHS/cv-builder", 
+            live: "https://superb-duckanoo-a223b4.netlify.app/"}
+        );   
 
         return storage.projectList;
     }

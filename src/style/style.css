@@ -600,4 +600,16 @@ body.dark > main > #about > .toggle-wrapper > .toggle{
     .project-name {
         font-size: 20px;
     }
+
+    .project-main {
+        flex-direction: column;
+    }
+
+    .project-aside {
+        height: 200px;
+    }
+
+    .project-img {
+        width: 100%;
+    }
 }

@@ -8,6 +8,7 @@ import ThingsToDo from "../assets/screenshots/thingstodo.png";
 import MyObservatory from "../assets/screenshots/myobservatory.png";
 import Battleship from "../assets/screenshots/battleship.png";
 import ResumeGenerator from "../assets/screenshots/resumegenerator.png"
+import Wavelength from "../assets/screenshots/Wavelength.png";
 
 
 const Interface = (() => {
@@ -73,9 +74,16 @@ const Interface = (() => {
         
         storage.addProject(ResumeGenerator, "Resume Generator", 
             "A fully adaptive resume generator developed using ReactJS and React Bootstrap. Customize fields, categories, and styling. Completely responsive output automatically scaled with A4 aspect ratio",
-            ["react", "reactbootstrap", "CSS", "npm"], 
+            ["react", "reactbootstrap", "CSS", "npm", "netlify"], 
             {repo: "https://github.com/HarryAhnHS/cv-builder", 
             live: "https://superb-duckanoo-a223b4.netlify.app/"}
+        );
+        
+        storage.addProject(Wavelength, "Wavelength", 
+            "A mock e-commerce site built with ReactJS and TailwindCSS, utilizing the Platzi Fake Store API. It includes dynamic routing via React Router and testing with React Testing Library and Vitest.",
+            ["react", "tailwind", "vitest", "reactrouter", "npm", "netlify"], 
+            {repo: "https://github.com/HarryAhnHS/shopping-cart", 
+            live: "https://main--effervescent-brigadeiros-0da795.netlify.app/"}
         );   
 
         return storage.projectList;

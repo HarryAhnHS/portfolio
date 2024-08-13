@@ -486,6 +486,22 @@ body.dark > main > #about > .toggle-wrapper > .toggle{
     background-image: url("../assets/icons/tools/reactbootstrap.svg");
 }
 
+.TAILWIND {
+    background-image: url("../assets/icons/tools/tailwind.svg");
+}
+
+.VITEST {
+    background-image: url("../assets/icons/tools/vitest.svg");
+}
+
+.REACTROUTER {
+    background-image: url("../assets/icons/tools/reactrouter.svg");
+}
+
+.NETLIFY {
+    background-image: url("../assets/icons/tools/netlify.svg");
+}
+
 /* Project hover */
 .project:hover, .project:focus {
     transform: scale(1.03);

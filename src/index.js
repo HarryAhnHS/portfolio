@@ -1,7 +1,7 @@
 import './style/style.css';
 import Interface from './modules/interface';
-import ProjectList from "./modules/project";
+import Favicon from './assets/icons/local/favicon.png'
 
-// document.getElementById("github").src = Git; // Fill github logo
+document.getElementById("favicon").href = Favicon;
 
 Interface.init();

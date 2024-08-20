@@ -38,7 +38,7 @@ body {
 body.dark {
     /* Custom properties for theme */
     --header-color: #0d1b2a;
-    --header-color-2: #081420;
+    --header-color-2: #112336;
     --header-text-color: #f0f1ee;
     --header-subtext-color: #d4d5d3;
 
@@ -46,7 +46,7 @@ body.dark {
     --main-text-color: white;
     --main-subtext-color: #d4d5d3;
 
-    --card-background-color: #1b263b;
+    --card-background-color: #3b4966;
 
     --accent-color: #ff715b;
 }
@@ -516,6 +516,10 @@ body.dark > main > #about > .toggle-wrapper > .toggle{
 
 .RAILWAY {
     background-image: url("../assets/icons/tools/railway.svg");
+}
+
+.SUPABASE {
+    background-image: url("../assets/icons/tools/supabase.svg");
 }
 
 /* Project hover */

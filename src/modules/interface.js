@@ -88,8 +88,8 @@ const Interface = (() => {
         ); 
         
         storage.addProject(FileStorage, "File Storage", 
-            "A full-stack file storage application built with nodeJS and express. User authentication using passportJS, Prisma ORM with PostGresql for database, and cloudinary for scalable cloud storage. Deployed on Railway and Supahost.",
-            ["nodejs", "express", "postgresql", "prisma", "tailwind", "npm", "railway"], 
+            "A full-stack file storage application built with nodeJS and express. User authentication using passportJS, Prisma ORM with PostGresql for database, and cloudinary for scalable cloud storage. Deployed app on Railway and database on Supabase.",
+            ["nodejs", "express", "postgresql", "prisma", "tailwind", "npm", "railway", "supabase"], 
             {repo: "https://github.com/HarryAhnHS/file-storage", 
             live: "https://file-storage-production.up.railway.app/"}
         );   

@@ -9,6 +9,7 @@ import MyObservatory from "../assets/screenshots/myobservatory.png";
 import Battleship from "../assets/screenshots/battleship.png";
 import ResumeGenerator from "../assets/screenshots/resumegenerator.png"
 import Wavelength from "../assets/screenshots/Wavelength.png";
+import FileStorage from "../assets/screenshots/filestorage.png"
 
 
 const Interface = (() => {
@@ -82,6 +83,13 @@ const Interface = (() => {
         storage.addProject(Wavelength, "Wavelength", 
             "A mock e-commerce site built with ReactJS and TailwindCSS, utilizing the Platzi Fake Store API. It includes dynamic routing via React Router and testing with React Testing Library and Vitest.",
             ["react", "tailwind", "vitest", "reactrouter", "npm", "netlify"], 
+            {repo: "https://github.com/HarryAhnHS/shopping-cart", 
+            live: "https://main--effervescent-brigadeiros-0da795.netlify.app/"}
+        ); 
+        
+        storage.addProject(FileStorage, "File Storage", 
+            "A full-stack file storage application built with nodeJS and express. User authentication using passportJS, Prisma ORM with PostGresql for database, and cloudinary for scalable cloud storage. Deployed on Railway and Supahost.",
+            ["nodejs", "express", "postgresql", "prisma", "tailwind", "npm", "railway"], 
             {repo: "https://github.com/HarryAhnHS/shopping-cart", 
             live: "https://main--effervescent-brigadeiros-0da795.netlify.app/"}
         );   

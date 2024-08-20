@@ -359,7 +359,7 @@ body.dark > main > #about > .toggle-wrapper > .toggle{
     height: 100%;
 
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: top center;
     background-size: cover;
 
     border-radius: 5px;
@@ -500,6 +500,22 @@ body.dark > main > #about > .toggle-wrapper > .toggle{
 
 .NETLIFY {
     background-image: url("../assets/icons/tools/netlify.svg");
+}
+
+.EXPRESS {
+    background-image: url("../assets/icons/tools/express.svg");
+}
+
+.POSTGRESQL {
+    background-image: url("../assets/icons/tools/postgresql.svg");
+}
+
+.PRISMA {
+    background-image: url("../assets/icons/tools/prisma.svg");
+}
+
+.RAILWAY {
+    background-image: url("../assets/icons/tools/railway.svg");
 }
 
 /* Project hover */

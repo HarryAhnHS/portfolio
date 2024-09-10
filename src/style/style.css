@@ -522,6 +522,22 @@ body.dark > main > #about > .toggle-wrapper > .toggle{
     background-image: url("../assets/icons/tools/supabase.svg");
 }
 
+.SOCKETIO {
+    background-image: url("../assets/icons/tools/socketio.svg");
+}
+
+.HEROKU {
+    background-image: url("../assets/icons/tools/heroku.svg");
+}
+
+.VERCEL {
+    background-image: url("../assets/icons/tools/vercel.svg");
+}
+
+.VITE {
+    background-image: url("../assets/icons/tools/vite.svg");
+}
+
 /* Project hover */
 .project:hover, .project:focus {
     transform: scale(1.03);

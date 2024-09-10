@@ -10,7 +10,7 @@ import Battleship from "../assets/screenshots/battleship.png";
 import ResumeGenerator from "../assets/screenshots/resumegenerator.png"
 import Wavelength from "../assets/screenshots/Wavelength.png";
 import FileStorage from "../assets/screenshots/filestorage.png"
-
+import Flexor from "../assets/screenshots/Flexor.png"
 
 const Interface = (() => {
     function init() {
@@ -88,11 +88,18 @@ const Interface = (() => {
         ); 
         
         storage.addProject(FileStorage, "File Storage", 
-            "A full-stack file storage application built with nodeJS and express. User authentication using passportJS, Prisma ORM with PostGresql for database, and cloudinary for scalable cloud storage. Deployed app on Railway and database on Supabase.",
+            "A full-stack file storage application built with nodeJS and expressJS. User authentication using passportJS, Prisma ORM with PostGresql for database, and cloudinary for scalable cloud storage. Deployed app on Railway and database on Supabase.",
             ["nodejs", "express", "postgresql", "prisma", "tailwind", "npm", "railway", "supabase"], 
             {repo: "https://github.com/HarryAhnHS/file-storage", 
             live: "https://file-storage-production.up.railway.app/"}
-        );   
+        );  
+        
+        storage.addProject(Flexor, "Flexor", 
+            "A full-stack social media platform built with the PERN stack (PostgreSQL, Express, React, Node.js), featuring jwt token authentication and real-time notifications via Socket.IO. The platform enables users to create and join realms, make posts, like content, and engage in nested comment threads, providing a dynamic and interactive social experience."
+            ["nodejs", "express", "react", "postgresql", "prisma", "socketio", "tailwind", "vite", "npm", "vercel", "heroku", "supabase"], 
+            {repo: "https://github.com/HarryAhnHS/flexor-front-end/tree/main", 
+            live: "https://flexor-front-end-2c6r.vercel.app/"}
+        );  
 
         return storage.projectList;
     }

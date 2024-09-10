@@ -95,11 +95,13 @@ const Interface = (() => {
         );  
         
         storage.addProject(Flexor, "Flexor", 
-            "A full-stack social media platform built with the PERN stack (PostgreSQL, Express, React, Node.js), featuring jwt token authentication and real-time notifications via Socket.IO. The platform enables users to create and join realms, make posts, like content, and engage in nested comment threads, providing a dynamic and interactive social experience."
-            ["nodejs", "express", "react", "postgresql", "prisma", "socketio", "tailwind", "vite", "npm", "vercel", "heroku", "supabase"], 
+            "A  social media platform built with the PERN stack (PostgreSQL, Express, React, Node.js). The platform enables users to create and join realms, make posts, like content, and engage in nested comment threads, and recieve real-time notifications.",
+            ["nodejs", "express", "react", "postgresql", "prisma", "socketio", "tailwind", "vercel", "supabase"], 
             {repo: "https://github.com/HarryAhnHS/flexor-front-end/tree/main", 
             live: "https://flexor-front-end-2c6r.vercel.app/"}
         );  
+
+        console.log(storage);
 
         return storage.projectList;
     }
@@ -149,6 +151,7 @@ const Interface = (() => {
                         const tools = document.createElement('div');
                         tools.classList.add('project-tools');
 
+                        console.log(project);
                         project.tools.forEach((tool) => {
                             const icon = document.createElement('div');
                             icon.classList.add("tool");

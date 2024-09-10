@@ -355,11 +355,11 @@ body.dark > main > #about > .toggle-wrapper > .toggle{
 
 .project-img {
     /* Temp */
-    width: 100px;
+    width: 150px;
     height: 100%;
 
     background-repeat: no-repeat;
-    background-position: top center;
+    background-position: top left;
     background-size: cover;
 
     border-radius: 5px;
@@ -560,8 +560,18 @@ body.dark > main > #about > .toggle-wrapper > .toggle{
 }
 
 /* Media queries */
+@media only screen and (max-width: 1200px) {
+    .project-tools {
+        gap: 5px;
+    }
 
-@media only screen and (max-width: 820px) {
+    .tool {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
     body {
         justify-content: center;
 
@@ -623,7 +633,7 @@ body.dark > main > #about > .toggle-wrapper > .toggle{
     }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 820px) {
     .project-tools {
         gap: 5px;
     }
